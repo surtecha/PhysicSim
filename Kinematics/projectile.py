@@ -171,11 +171,11 @@ while running:
     projectile_group.update()
 
     # Info *******************************************************************
-    title = font.render("Projectile Motion", True, WHITE)
+    title = font.render("PROJECTILE MOTION", True, WHITE)
     fpstext = font.render(f"FPS : {int(clock.get_fps())}", True, WHITE)
     thetatext = font.render(f"Angle : {int(abs(theta))}", True, WHITE)
     degreetext = font.render(f"{int(abs(theta))}°", True, YELLOW)
-    win.blit(title, (80, 30))
+    win.blit(title, (700, 30))
     win.blit(fpstext, (20, 400))
     win.blit(thetatext, (20, 420))
     win.blit(degreetext, (origin[0]+38, origin[1]-20))
@@ -185,10 +185,10 @@ while running:
         timetext = font.render(f"Time : {currentp.timeOfFlight()}s", True, WHITE)
         rangetext = font.render(f"Range : {currentp.getRange()}m", True, WHITE)
         heighttext = font.render(f"Max Height : {currentp.getMaxHeight()}m", True, WHITE)
-        win.blit(veltext, (WIDTH-150, 400))
-        win.blit(timetext, (WIDTH-150, 420))
-        win.blit(rangetext, (WIDTH-150, 440))
-        win.blit(heighttext, (WIDTH-150, 460))
+        win.blit(veltext, (WIDTH-250, 400))
+        win.blit(timetext, (WIDTH-250, 420))
+        win.blit(rangetext, (WIDTH-250, 440))
+        win.blit(heighttext, (WIDTH-250, 460))
 
     pygame.draw.rect(win, (0,0,0), (0, 0, WIDTH, HEIGHT), 5)
     clock.tick(FPS)
