@@ -18,7 +18,7 @@ COLOR_NEPTUNE = (63, 84, 186)
 FONT_1 = pygame.font.SysFont("Trebuchet MS", 21)
 FONT_2 = pygame.font.SysFont("Trebuchet MS", 16)
 pygame.display.set_caption("Solar System Simulation")
-BG = pygame.transform.scale(pygame.image.load("background.jpg"), (WIDTH, HEIGHT))
+BG = pygame.transform.scale(pygame.image.load("../bg-images/background.jpg"), (WIDTH, HEIGHT))
 
 
 class Planet:
