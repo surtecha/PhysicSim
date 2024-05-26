@@ -1,0 +1,1 @@
+This code simulates the gravitational slingshot effect using Pygame, allowing users to launch spacecraft that are influenced by a central planet's gravity. The spacecraft's trajectory is visualized in real-time, with initial velocity determined by mouse drag direction and magnitude.

@@ -1,0 +1,1 @@
+The provided code is a simple N-body gravitational simulation using Python and NumPy. The simulation models the gravitational interactions between particles in a three-dimensional space and visualizes their positions and energy over time using Matplotlib.

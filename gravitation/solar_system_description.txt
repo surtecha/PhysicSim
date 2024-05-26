@@ -1,0 +1,1 @@
+A dynamic solar system simulation written in Python using Pygame, depicting planetary orbits, gravitational interactions, and user-controlled navigation and visualization options.

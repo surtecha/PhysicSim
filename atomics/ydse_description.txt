@@ -1,0 +1,1 @@
+This code simulates wave propagation using a finite difference method on a 2D grid with specified boundary conditions, a special conditon of the Young’s Double slit experiment. It updates and visualizes the wave in real-time based on the wave equation parameters and initial conditions.

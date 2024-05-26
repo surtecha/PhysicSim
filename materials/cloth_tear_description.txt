@@ -1,0 +1,1 @@
+This code seems to create a simulation of a cloth using Pygame. The cloth is represented by a grid of points connected by sticks. Users can interact with the cloth by clicking and dragging points.

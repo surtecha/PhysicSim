@@ -1,0 +1,1 @@
+This code simulates smoke dynamics using the PhiFlow library, employing the advection and buoyancy forces in a fluid simulation. It visualizes the evolving smoke density field in real-time over a series of time steps.
