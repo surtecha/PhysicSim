@@ -1,7 +1,7 @@
 import sys
 import os
 import importlib
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QTabWidget
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QTabWidget, QLabel, QScrollArea
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor
 
@@ -48,14 +48,36 @@ class SimulationApp(QWidget):
         # Create a button for each simulation file
         for sim_file in simulation_files:
             sim_name = os.path.splitext(sim_file)[0]  # Extract the simulation name without the .py extension
+            # read the description file
+            description_path = os.path.join(folder_path, f"{sim_name}_description.txt")
+            if os.path.exists(description_path):
+                with open(description_path, 'r') as file:
+                    description = file.read().strip()
+            else:
+                description = "No description available."
+
+            # create and set up the description label
+            description_label = QLabel(description)
+            description_label.setWordWrap(True)
+            description_label.setStyleSheet("QLabel { color : white;}")
+
+            # Create and set up the button
             button = QPushButton(sim_name)
             # Connect the button click to the function that runs the simulation
             button.clicked.connect(lambda checked, c=category, s=sim_name: self.run_simulation(c, s))
+
+            # Add the description label and button to the layout
+            layout.addWidget(description_label)
             layout.addWidget(button)  # Add the button to the layout
 
         category_widget.setLayout(layout)  # set the layout for the category widget
 
-        return category_widget
+        # create a scroll area and set its widget to the category widget
+        scroll_area = QScrollArea()
+        scroll_area.setWidget(category_widget)
+        scroll_area.setWidgetResizable(True)
+
+        return scroll_area
 
     def run_simulation(self, category, sim_name):
         """

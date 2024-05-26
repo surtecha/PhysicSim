@@ -1,0 +1,1 @@
+This is a simulation of projectile motion using Pygame. It allows users to set the initial velocity of the projectile by entering a value, then clicking and dragging to set the launch angle. The simulation displays the trajectory of the projectile along with information such as angle, velocity, time of flight, range, and maximum height.

@@ -1,0 +1,1 @@
+A Pygame and Pymunk-based simulation demonstrating a Newton's Cradle with interactive features. The simulation allows users to interact with the cradle by clicking and dragging.

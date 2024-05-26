@@ -1,0 +1,1 @@
+ This code simulates the time evolution of a superconductor using the nonlinear Schrödinger equation, updating and visualizing the system state in real-time. It employs a split-step Fourier method with specified parameters for spatial resolution, time step, and superconductor properties.

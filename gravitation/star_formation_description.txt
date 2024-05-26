@@ -1,0 +1,1 @@
+A Smoothed Particle Hydrodynamics (SPH) simulation in Python using numpy and matplotlib. This simulation models the behavior of particles in a fluid system, accounting for gravitational interactions, equations of state, and viscosity effects. The simulation visualizes particle distributions and density profiles over time.

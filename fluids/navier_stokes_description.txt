@@ -1,0 +1,1 @@
+This code simulates the 2D Navier-Stokes equations for fluid dynamics, using Fourier transforms for advection, pressure correction, and diffusion. It visualizes the vorticity field in real-time as the simulation progresses.

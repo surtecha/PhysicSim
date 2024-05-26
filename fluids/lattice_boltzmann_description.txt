@@ -1,0 +1,1 @@
+This code simulates fluid dynamics using the lattice Boltzmann method, modeling flow around a cylindrical obstacle. It updates and visualizes the velocity field and vorticity in real-time as the simulation progresses.
