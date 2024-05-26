@@ -1,5 +1,3 @@
-# Projectile Motion
-
 import math
 import random
 import pygame
@@ -7,7 +5,7 @@ import pygame
 from projfunc import *
 
 pygame.init()
-SCREEN = WIDTH, HEIGHT = 300, 550
+SCREEN = WIDTH, HEIGHT = 1500, 700
 
 info = pygame.display.Info()
 width = info.current_w
@@ -38,7 +36,6 @@ font = pygame.font.SysFont('verdana', 12)
 origin = (20, 340)
 radius = 250
 
-u = 50
 g = 9.8
 
 class Projectile(pygame.sprite.Sprite):
@@ -98,6 +95,35 @@ theta = -30
 end = getPosOnCircumeference(theta, origin)
 arct = toRadian(theta)
 arcrect = pygame.Rect(origin[0]-30, origin[1]-30, 60, 60)
+
+# Function to draw text input
+def draw_text_input(win, font, text, x, y):
+    text_surface = font.render(text, True, WHITE)
+    win.blit(text_surface, (x, y))
+
+# Function to get user input for initial velocity
+def get_user_velocity():
+    velocity_input = ''
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    try:
+                        velocity = float(velocity_input)
+                        return velocity
+                    except ValueError:
+                        print("Invalid input. Please enter a valid number.")
+                elif event.key == pygame.K_BACKSPACE:
+                    velocity_input = velocity_input[:-1]
+                else:
+                    velocity_input += event.unicode
+        win.fill(BLACK)
+        draw_text_input(win, font, "Enter initial velocity (m/s): " + velocity_input, 20, 20)
+        pygame.display.update()
+        clock.tick(FPS)
+
+# Get user input for initial velocity
+u = get_user_velocity()
 
 running = True
 while running:
@@ -168,5 +194,4 @@ while running:
     clock.tick(FPS)
     pygame.display.update()
     
-            
 pygame.quit()
