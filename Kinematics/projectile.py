@@ -162,7 +162,7 @@ while running:
                     end = getPosOnCircumeference(theta, origin)
                     arct = toRadian(theta)
     
-    pygame.draw.line(win, WHITE, origin, (origin[0] + 250, origin[1]), 2)
+    pygame.draw.line(win, WHITE, origin, (origin[0] + 1400, origin[1]), 2)
     pygame.draw.line(win, WHITE, origin, (origin[0], origin[1] - 250), 2)
     pygame.draw.line(win, AQUA, origin, end, 2)
     pygame.draw.circle(win, WHITE, origin, 3)
