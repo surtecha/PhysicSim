@@ -16,8 +16,8 @@ PLANET_SIZE = 50 # radius of planet
 OBJ_SIZE = 5
 VEL_SCALE = 100
 
-BG = pygame.transform.scale(pygame.image.load("background.jpg"), (WIDTH, HEIGHT))
-PLANET = pygame.transform.scale(pygame.image.load("jupiter.png"), (PLANET_SIZE*2, PLANET_SIZE*2))
+BG = pygame.transform.scale(pygame.image.load("gravitation/assets/background.jpg"), (WIDTH, HEIGHT))
+PLANET = pygame.transform.scale(pygame.image.load("gravitation/assets/planet.png"), (PLANET_SIZE*2, PLANET_SIZE*2))
 
 WHITE = (255, 255, 255) # rgb colour code
 RED = (255, 0, 0)
