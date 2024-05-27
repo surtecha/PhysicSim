@@ -12,7 +12,7 @@ class SimulationApp(QWidget):
 
     def initUI(self):
         """Initialize the user interface."""
-        self.setWindowTitle('Simulation Categories')
+        self.setWindowTitle('Multi-Physics Simulation Engine')
 
         layout = QVBoxLayout()  # Main layout for the window
 
@@ -30,7 +30,7 @@ class SimulationApp(QWidget):
         self.applyDarkTheme()  # Apply dark theme to the application
 
         # Show the window in full screen
-        self.showFullScreen()
+        self.showMaximized()
 
     def createCategory(self, category):
         """
@@ -232,6 +232,11 @@ class SimulationApp(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # Create the application
+        
+    # Load and set the application icon
+    icon_path = os.path.join(os.path.dirname(__file__), 'logo.jpg')  
+    app.setWindowIcon(QIcon(icon_path))
+    
     ex = SimulationApp()  # Create an instance of the SimulationApp
     ex.show()  # Show the application window
     sys.exit(app.exec_())  # Run the application event loop
