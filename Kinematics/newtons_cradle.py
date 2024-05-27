@@ -54,7 +54,6 @@ def reset_bodies(space):
 
 
 def main():
-
     pygame.init()
     screen = pygame.display.set_mode(display_size)
     width, height = screen.get_size()
@@ -209,6 +208,9 @@ def main():
 
         pygame.display.flip()
         clock.tick(fps)
+
+    pygame.quit()
+    return 0  # Return 0 to indicate normal exit
 
 
 if __name__ == "__main__":
