@@ -102,12 +102,13 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            elif event.type == pygame.KEYDOWN and event.key == pygame.K_p:
+
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_s:
                 pygame.image.save(screen, "newtons_cradle.png")
 
             if event.type == pygame.KEYDOWN and event.key == pygame.K_r:
                 reset_bodies(space)
-            elif event.type == pygame.KEYDOWN and event.key == pygame.K_f:
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_a:
                 r = random.randint(1, 4)
                 for body in bodies[0:r]:
                     body.apply_impulse_at_local_point((-6000, 0))
@@ -131,8 +132,8 @@ def main():
                     space.remove(selected)
                     selected = None
 
-            elif event.type == pygame.KEYDOWN:
-                running = False
+            elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                running = False  # Quit simulation only on Escape key
 
         mpos = pygame.mouse.get_pos()
         p = from_pygame(Vec2d(*mpos))
@@ -171,11 +172,35 @@ def main():
                 True,
                 pygame.Color("darkgrey"),
             ),
+            (5, height - 80),
+        )
+        screen.blit(
+            font.render(
+                "Press R to reset",
+                True,
+                pygame.Color("darkgrey"),
+            ),
+            (5, height - 65),
+        )
+        screen.blit(
+            font.render(
+                "Press A to simulate automaticall",
+                True,
+                pygame.Color("darkgrey"),
+            ),
+            (5, height - 50),
+        )
+        screen.blit(
+            font.render(
+                "Press S to take a screenshot",
+                True,
+                pygame.Color("darkgrey"),
+            ),
             (5, height - 35),
         )
         screen.blit(
             font.render(
-                "Press R to reset, any other key to quit",
+                "Press ESC to quit",
                 True,
                 pygame.Color("darkgrey"),
             ),
