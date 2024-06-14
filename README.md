@@ -4,6 +4,23 @@
 
 <h1 align="center">Multi-Physics Simulation Engine</h1>
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Requirements](#requirements)
+    - [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+    - [Interface](#interface)
+    - [Adding New Simulations](#adding-new-simulations)
+    - [Example](#example)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Overview
 
 The Multi-Physics Simulation Engine is a comprehensive application designed to facilitate the exploration and simulation of various physical phenomena. The application provides an intuitive and user-friendly interface for running simulations in multiple categories such as Atomics, Fluids, Kinematics, Gravitation, and Materials. Each category contains a set of predefined simulations that users can easily run and visualize.
@@ -37,6 +54,33 @@ Ensure you have the following installed on your system:
     ```sh
     pip install -r requirements.txt
     ```
+
+### Requirements
+
+Ensure the following packages are listed in your `requirements.txt` file:
+
+```
+jax==0.4.28
+jaxlib==0.4.28
+matplotlib==3.9.0
+matplotlib-inline==0.1.7
+numpy==1.26.4
+phiflow==2.5.4
+phiml==1.5.1
+pillow==10.3.0
+pygame==2.5.2
+pymunk==6.8.0
+PyQt5==5.15.10
+PyQt5-Qt5==5.15.13
+PyQt5-sip==12.13.0
+pytz==2024.1
+PyYAML==6.0.1
+pyzmq==26.0.3
+qtconsole==5.5.2
+QtPy==2.4.1
+sympy==1.12
+tqdm==4.66.4
+```
 
 ### Running the Application
 
