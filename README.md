@@ -118,12 +118,14 @@ The application will launch and display the main window with tabs for each simul
 ## Project Structure
 
 - **main.py**: The main application script that initializes the GUI and handles user interactions.
-- **/Atomics**: Directory containing atomic simulations and their resources (Python scripts, images, and description files).
+- **/Atomics**: Directory containing atomic simulations and their resources.
 - **/Fluids**: Directory containing fluid simulations and their resources.
 - **/Kinematics**: Directory containing kinematic simulations and their resources.
 - **/Gravitation**: Directory containing gravitational simulations and their resources.
 - **/Materials**: Directory containing material simulations and their resources.
 - **logo.jpg**: The application icon.
+
+Each directory contains python scripts, images, and description files for respective simulations.
 
 ## Usage
 
