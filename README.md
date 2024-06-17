@@ -108,6 +108,12 @@ The application will launch and display the main window with tabs for each simul
   Description of simulation displayed when clicked
 </p>
 
+<p align="center">
+  <img src="https://github.com/surtecha/multi-physics-simulation-engine/assets/91011302/6b690cee-3953-4768-a33b-bdfe2546b3b3" alt="Simulation window" width="600"/>
+</p>
+<p align="center">
+  Simulation window
+</p>
 
 ## Project Structure
 
