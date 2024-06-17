@@ -92,6 +92,23 @@ python main.py
 
 The application will launch and display the main window with tabs for each simulation category.
 
+## UI Preview
+
+<p align="center">
+  <img src="https://github.com/surtecha/multi-physics-simulation-engine/assets/91011302/496f5d4b-c4dd-4791-83df-e8579e506780" alt="Starting window upon launching (Atomics section)" width="600"/>
+</p>
+<p align="center">
+  Starting window upon launching (Atomics section)
+</p>
+
+<p align="center">
+  <img src="https://github.com/surtecha/multi-physics-simulation-engine/assets/91011302/74fde5d3-c209-4b59-b7b7-f72b4e88ab7c" alt="Description of simulation displayed when clicked" width="600"/>
+</p>
+<p align="center">
+  Description of simulation displayed when clicked
+</p>
+
+
 ## Project Structure
 
 - **main.py**: The main application script that initializes the GUI and handles user interactions.
