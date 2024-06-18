@@ -9,7 +9,6 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Requirements](#requirements)
     - [Running the Application](#running-the-application)
@@ -34,13 +33,6 @@ The Multi-Physics Simulation Engine is a comprehensive application designed to f
 - **High-Quality Visualization**: Buttons and icons are designed for high-quality display with rounded, smooth transformations.
 
 ## Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed on your system:
-
-- Python 3.7+
-- PyQt5
 
 ### Installation
 
