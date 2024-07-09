@@ -1,13 +1,9 @@
-
----
-
 # Contributing to Multi-Physics Simulation Engine
 
 
 ## Table of Contents
 
 - [How to Contribute](#how-to-contribute)
-- [Code of Conduct](#code-of-conduct)
 - [Bug Reports](#bug-reports)
 - [Feature Requests](#feature-requests)
 - [Improving Documentation](#improving-documentation)
@@ -61,10 +57,6 @@ git push origin main
 ### 7. Open a Pull Request
 
 Open a pull request to the main repository. Describe your changes in detail and ensure that you reference any relevant issues.
-
-## Code of Conduct
-
-Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
 
 ## Bug Reports
 
