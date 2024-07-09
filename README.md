@@ -148,13 +148,7 @@ If you have a new simulation called `projectile.py` for the Kinematics category:
 
 ## Contributing
 
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Commit your changes.
-4. Push to the branch.
-5. Open a pull request.
+Please read the `CONTRIBUTING.md` file for detailed instructions on contributing to the project.
 
 ## License
 
