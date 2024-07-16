@@ -1,9 +1,17 @@
 import sys
 import os
 import importlib
+import multiprocessing
+import subprocess
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QTabWidget, QLabel, QScrollArea, QSizePolicy, QGridLayout, QDialog, QHBoxLayout, QSpacerItem, QFrame
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPalette, QColor, QIcon, QPixmap, QPainter, QPainterPath
+
+def run_simulation_process(module_name):
+    try:
+        subprocess.run([sys.executable, "-c", f"import {module_name}; {module_name}.main()"], check=True)
+    except subprocess.CalledProcessError:
+        print(f"Simulation {module_name} was closed or encountered an error.")
 
 class SimulationApp(QWidget):
     def __init__(self):
@@ -199,14 +207,19 @@ class SimulationApp(QWidget):
 
     def run_simulation(self, category, sim_file):
         """
-        Dynamically import and run the simulation function from the specified module.
+        Run the simulation in a separate process.
         :param category: The category of the simulation (e.g., "Kinematics").
         :param sim_file: The name of the simulation file (e.g., "projectile.py").
         """
         sim_name = os.path.splitext(sim_file)[0]  # Extract the simulation name without the .py extension
         module_name = f"{category}.{sim_name}"  # Create the module name string
-        module = importlib.import_module(module_name)  # Import the module dynamically
-        module.main()  # Call the main function of the imported module
+        
+        # Create and start a new process for the simulation
+        process = multiprocessing.Process(target=run_simulation_process, args=(module_name,))
+        process.start()
+        
+        # Don't wait for the process to complete - let it run independently
+        # The main application will continue to be responsive
 
     def applyDarkTheme(self):
         """Apply a dark theme to the application."""
@@ -231,6 +244,7 @@ class SimulationApp(QWidget):
 
 
 if __name__ == '__main__':
+    multiprocessing.freeze_support()  # Needed for multiprocessing to work with PyInstaller
     app = QApplication(sys.argv)  # Create the application
         
     # Load and set the application icon
